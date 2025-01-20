@@ -1,0 +1,1 @@
+export const kake = (a, b) => a * b

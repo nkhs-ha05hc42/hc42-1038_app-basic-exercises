@@ -1,0 +1,1 @@
+export const wari = (a, b) => a / b
