@@ -1,4 +1,4 @@
-const getQ8_1 = (req, res) => {
+const getQ8_1_1 = (req, res) => {
     const { code } = req.query;
     res.send({
       code: code,
@@ -6,7 +6,7 @@ const getQ8_1 = (req, res) => {
     });
   };
 
-  const postQ8_2 = (req, res) => {
+  const postQ8_1_2 = (req, res) => {
     const { code, postcode, address } = req.body;
     res.send({
       status: "OK",
@@ -19,7 +19,7 @@ const getQ8_1 = (req, res) => {
     });
   };
 
-  const putQ8_3 = (req, res) => {
+  const putQ8_1_3 = (req, res) => {
     const { code, postcode, address } = req.body;
   
     console.log({
@@ -33,7 +33,7 @@ const getQ8_1 = (req, res) => {
     });
   };
 
-  const deleteQ8_4 = (req, res) => {
+  const deleteQ8_1_4 = (req, res) => {
     const { code } = req.query;
   
     res.send({
@@ -45,9 +45,9 @@ const getQ8_1 = (req, res) => {
 
   
   export const q8_1Controller = {
-    getQ8_1,
-    postQ8_2,
-    putQ8_3,
-    deleteQ8_4,
+    getQ8_1_1,
+    postQ8_1_2,
+    putQ8_1_3,
+    deleteQ8_1_4,
   };
   
