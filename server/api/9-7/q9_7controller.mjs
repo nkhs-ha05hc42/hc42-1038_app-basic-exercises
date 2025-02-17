@@ -31,6 +31,13 @@ const updateExam = async (req, res) => {
 };
 
 
+const deleteExam = async (req, res) => {
+  const { id } = req.params; 
+  const result = await examModel.deleteExam(id);
+  res.send(JSON.stringify({ status: "success", data: result }));
+};
+
+
 
 
 export const examsController = {
@@ -38,4 +45,5 @@ export const examsController = {
   getExamById,
   createExam,
   updateExam,
+  deleteExam
 };

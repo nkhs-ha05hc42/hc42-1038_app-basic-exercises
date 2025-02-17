@@ -29,6 +29,7 @@ routers.get("/api/9-7", examsController.getAllExams);
 routers.get("/api/9-7/:id", examsController.getExamById);
 routers.post("/api/9-7", examsController.createExam);
 routers.put("/api/9-7/:id", examsController.updateExam);
+routers.delete("/api/9-7/:id", examsController.deleteExam);
 
 // client配下は、ブラウザサイドで実行されるファイル（HTML/JS/CSS/画像など）を配置する
 routers.use(express.static(`${path.resolve()}/client`))

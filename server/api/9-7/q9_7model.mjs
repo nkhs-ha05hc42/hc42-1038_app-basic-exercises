@@ -34,9 +34,18 @@ const updateExam = async (id, user_id, year, month, day, name, score) => {
   return result.rows[0]; 
 };
 
+const deleteExam = async (id) => {
+  const result = await query(
+    `DELETE FROM exams WHERE id = $1 RETURNING *;`,
+    [id]
+  );
+  return result.rows[0];
+};
+
 export const examModel = {
   selectAllExams,
   selectExamById,
   insertExam,
   updateExam,
+  deleteExam,
 };
